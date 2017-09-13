@@ -12,47 +12,7 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" defer>
-    $(document).ready(function(){
-//SCROLL TOP AND HIDE
-      var $btnTop = $(".btn-top");
-  //HIDE BUTTON
-      $(window).scroll(function(){
-        if($(document).scrollTop() > 30){
-          $btnTop.fadeIn("slow");
-        } else {
-          $btnTop.fadeOut("slow");
-        }
-      });
-  //SCROLL TOP
-      $btnTop.on("click", function(){
-          $("html,body").animate({scrollTop:0}, 900);
-      });
-  //KBJFAKBJFASBJK>FSAJB:F
-  $(".navbar a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-
-    // Prevent default anchor click behavior
-    event.preventDefault();
-
-    // Store hash
-    var hash = this.hash;
-
-    // Using jQuery's animate() method to add smooth page scroll
-    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-    $('html, body').animate({
-     scrollTop: $(hash).offset().top
-    }, 900, function(){
-
-     // Add hash (#) to URL when done scrolling (default click behavior)
-     window.location.hash = hash;
-     });
-    } // End if
-    });
-  });
-    </script>
+    <script type="text/javascript" src="script.js"></script>
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="45">
     <button  class="btn-top" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span><br>To Top</button>
@@ -110,7 +70,7 @@
     <div class="container-fluid bg-grey">
       <div class="row">
         <div class="col-sm-4">
-            <span class="glyphicon glyphicon-globe logo"></span>
+            <span class="glyphicon glyphicon-globe logo slideanim"></span>
         </div>
         <div class="col-sm-8">
             <h2 class="text-uppercase">Our values</h2>
@@ -123,7 +83,7 @@
     <div id="services" class="container-fluid text-center">
       <h2>Services</h2>
       <h4>What we offer</h4>
-      <div class="row">
+      <div class="row slideanim">
         <div class="col-sm-4">
           <span class="glyphicon glyphicon-off logo-small"></span>
           <h4 class="text-uppercase">Power</h4>
@@ -141,7 +101,7 @@
         </div>
 
       </div>
-      <div class="row">
+      <div class="row slideanim">
         <div class="col-sm-4">
           <span class="glyphicon glyphicon-leaf logo-small"></span>
           <h4 class="text-uppercase">Green</h4>
@@ -164,7 +124,7 @@
     <div id="portfolio" class="container-fluid text-center bg-grey">
       <h2>Portfolio</h2>
       <h4>What we have created</h4>
-      <div class="row">
+      <div class="row slideanim">
         <div class="col-sm-4">
           <div class="thumbnail">
             <img src="img\image.png" alt="">
@@ -229,7 +189,7 @@
     <div id="pricing" class="container-fluid text-center">
       <h1>PRICING</h1>
       <h4>Choose a payment plan that works for you</h4>
-      <div class="row">
+      <div class="row slideanim">
         <div class="col-sm-4">
           <div class="panel panel-default">
             <div class="panel-heading">
@@ -291,7 +251,7 @@
       </div>
 
     </div>
-    <div id="contact" class="container-fluid bg-grey">
+    <div id="contact" class="container-fluid bg-grey slideanim">
       <h2 class="text-uppercase text-center">Contact</h2>
       <div class="row">
         <div class="col-sm-5">
